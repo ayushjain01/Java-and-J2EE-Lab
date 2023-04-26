@@ -6,6 +6,9 @@ You will find the code in under the ```src``` folder.
 
 ![image](https://user-images.githubusercontent.com/67141217/234694044-b5778a6d-e1e7-4bed-992a-8c43dc0117ff.png)
 
+## SetUps
+
+#### Swing Setup - [click here](https://web.cs.ucla.edu/~miryung/teaching/EE379K-Spring2014/SwingTutorial.html)
 
 ## Updated Syllabus
 
