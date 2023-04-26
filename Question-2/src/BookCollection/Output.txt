@@ -1,0 +1,141 @@
+Enter Book Details
+Enter Title
+The Great Gatsby
+Enter Author
+F. Scott Fitzgerald
+Enter Publisher
+Scribner
+Enter Price
+399
+Enter 1 to continue : )
+1
+Enter Book Details
+Enter Title
+The Catcher in the Rye
+Enter Author
+J.D. Salinger
+Enter Publisher
+Little, Brown and Company
+Enter Price
+299
+Enter 1 to continue : )
+1
+Enter Book Details
+Enter Title
+1984
+Enter Author
+George Orwell
+Enter Publisher
+Secker and Warburg
+Enter Price
+249
+Enter 1 to continue : )
+1
+Enter Book Details
+Enter Title
+Animal Farm
+Enter Author
+George Orwell
+Enter Publisher
+Secker and Warburg
+Enter Price
+199
+Enter 1 to continue : )
+3
+Before Sorting - 
+[Book Title : The Great Gatsby
+Author : F. Scott Fitzgerald
+Publisher : Scribner
+Price : 399.0, Book Title : The Catcher in the Rye
+Author : J.D. Salinger
+Publisher : Little, Brown and Company
+Price : 299.0, Book Title : 1984
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 249.0, Book Title : Animal Farm
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 199.0]
+After Sorting - 
+[Book Title : Animal Farm
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 199.0, Book Title : 1984
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 249.0, Book Title : The Catcher in the Rye
+Author : J.D. Salinger
+Publisher : Little, Brown and Company
+Price : 299.0, Book Title : The Great Gatsby
+Author : F. Scott Fitzgerald
+Publisher : Scribner
+Price : 399.0]
+Enter author's name : 
+George Orwell
+Book Title : 1984
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 249.0
+Book Title : Animal Farm
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 199.0
+Enter base price : 
+222
+Books with price > than base price 222.0
+Book Title : The Great Gatsby
+Author : F. Scott Fitzgerald
+Publisher : Scribner
+Price : 399.0
+Book Title : The Catcher in the Rye
+Author : J.D. Salinger
+Publisher : Little, Brown and Company
+Price : 299.0
+Book Title : 1984
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 249.0
+Enter a substring to search books : 
+The
+1=Book Title : The Great Gatsby
+Author : F. Scott Fitzgerald
+Publisher : Scribner
+Price : 399.0
+2=Book Title : The Catcher in the Rye
+Author : J.D. Salinger
+Publisher : Little, Brown and Company
+Price : 299.0
+Enter Publisher Name : 
+Secker and Warburg
+Book Title : 1984
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 249.0
+Book Title : Animal Farm
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 199.0
+Enter title : 
+The Catcher in the Rye
+Enter updated publisher information : 
+Little, Brown & Co.
+1
+Book Title : The Great Gatsby
+Author : F. Scott Fitzgerald
+Publisher : Scribner
+Price : 399.0
+2
+Book Title : The Catcher in the Rye
+Author : J.D. Salinger
+Publisher : Little, Brown & Co.
+Price : 299.0
+3
+Book Title : 1984
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 249.0
+4
+Book Title : Animal Farm
+Author : George Orwell
+Publisher : Secker and Warburg
+Price : 199.0
