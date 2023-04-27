@@ -1,25 +1,23 @@
-package MySQLxSwing;
-
+package myProject;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import com.mysql.cj.xdevapi.Statement;
-
-import mypackage.student;
-
-public class MySQLWindow extends JFrame {
-    MySQLWindow() {
+import javax.swing.JTextField; 
+ 
+ 
+public class MySQLWindows extends JFrame {
+	MySQLWindows() {
             super("My Jframe Example");
             JLabel jlrep = new JLabel("Representative Information");
             JLabel jl11 = new JLabel("Enter RepNo");
@@ -77,10 +75,12 @@ public class MySQLWindow extends JFrame {
             jb1.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
                             try {
-                                Statement stmt;
-                                Class.forName("com.mysql.jdbc.Driver");
+//                            	Exception in thread "AWT-EventQueue-1" 
+//                            	java.lang.ClassCastException: com.mysql.cj.jdbc.StatementImpl cannot be cast to com.mysql.cj.xdevapi.Statement
+//                            	at jdbc.Driver$1.actionPerformed(Driver.java:90)
+                                Class.forName("com.mysql.cj.jdbc.Driver");
                                 Connection conn =
-                                    DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "password");
+                                    DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "msrit");
                                 if (conn != null) {
                                     System.out.println("Connection successful !!!");
                                     String Repno = jtf11.getText();
@@ -88,11 +88,11 @@ public class MySQLWindow extends JFrame {
                                     String state = jtf13.getText();
                                     String commission = jtf14.getText();
                                     String rate = jtf15.getText();
-                                    stmt = (Statement) conn.createStatement();
+                                    Statement stmt = (Statement) conn.createStatement();
                                     System.out.println(Repno + Repname + state +
                                         commission);
-                                    String query1 = "insert into Representative values('" + Repno + "','" + Repname + "','" +  state +  "','" + commission + "','" + rate "');"; 
-  
+                                    String query1 = "insert into Representative values('" + Repno + "','" + Repname + "','" +  state +  "','" + commission + "','" + rate+ "');"; 
+ 
                                     ((java.sql.Statement) stmt).executeUpdate(query1);
                                     }
                                     else
@@ -111,7 +111,7 @@ public class MySQLWindow extends JFrame {
                                         Statement stmt2;
                                         Class.forName("com.mysql.jdbc.Driver");
                                         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root",
-                                            "deek");
+                                            "msrit");
                                         if (conn != null) {
                                             System.out.println("Connection successful !!!");
                                             String Custno = jtf21.getText();
@@ -125,7 +125,7 @@ public class MySQLWindow extends JFrame {
                                                 Rno);
                                             String query2 = "insert into Customer values('" + Custno + "','" +
                                                 CustName + "','" + state + "','" + cr + "','" + Rno + "');";
-                                            stmt2.executeUpdate(query2);
+                                            ((java.sql.Statement) stmt2).executeUpdate(query2);
                                         } else
                                             System.out.println("Connection not successful!!!");
                                             }
@@ -142,14 +142,11 @@ public class MySQLWindow extends JFrame {
                                             Class.forName("com.mysql.jdbc.Driver");
                                             Connection conn = DriverManager.getConnection(
                                                 "jdbc:mysql://localhost:3306/test", "root",
-                                                "deek");
+                                                "msrit");
                                             if (conn != null) {
                                                 stmt = (Statement) conn.createStatement();
-                                                String query3 = "SELECT * FROM
-                                                Representative WHERE RepNo IN(SELECT RepNo FROM Customer WHERE Credit_Limit >
-                                                    15000)
-                                                ";
-                                                ResultSet rs = stmt.executeQuery(query3);
+                                                String query3 = "SELECT * FROM Representative WHERE RepNo IN(SELECT Rno FROM Customer WHERE Credit_Limit >15000";
+                                                ResultSet rs = ((java.sql.Statement) stmt).executeQuery(query3);
                                                 while (rs.next()) {
                                                     jta.append("Representative Information");
                                                     jta.append("\n");
@@ -182,7 +179,7 @@ public class MySQLWindow extends JFrame {
                                     }); setContentPane(panel);
                             }
                             public static void main(String[] args) {
-                            	MySQLWindow mf = new MySQLWindow();
+                            	MySQLWindows mf = new MySQLWindows ();
                                 mf.getContentPane().setLayout(
                                     new BoxLayout(mf.getContentPane(), BoxLayout.Y_AXIS));
                                 mf.setVisible(true);
